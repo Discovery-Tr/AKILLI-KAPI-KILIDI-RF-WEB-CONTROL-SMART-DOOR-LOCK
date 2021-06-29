@@ -1,38 +1,46 @@
-AKILLI KAPI KİLİDİ +RF + WEB CONTROL – ( SMART DOOR LOCK )
-27/06/2021 / 3d, Arduino / 0 Yorum
+# AKILLI KAPI KİLİDİ +RF + WEB CONTROL – ( SMART DOOR LOCK )
 
-        Merhaba,
-          Bu yazımızda evde akıllı kapı kilidi nasıl yapılır buna değineceğiz. Piyasada hali hazırda satılan akıllı kapı kilitleri fahiş rakamlara satılmakta, ayrıca kumanda ve diğer istekler için ekstra ücretler istenmekte. Üstelik her kapıya da uyum sağlamamaktadır.
+<p align="center">
+  <a href="https://www.youtube.com/watch?v=PlckOVlVY0M" target="_blank">
+  <img src="https://kirmiziyuz.com/wp-content/uploads/2021/06/youtube.jpg"/>
+ </a>
+</p>
+          Merhaba,
+ 
+          Bu yazımızda evde akıllı kapı kilidi nasıl yapılır buna değineceğiz. Piyasada hali hazırda satılan akıllı kapı kilitleri fahiş rakamlara satılmakta, ayrıca kumanda ve diğer istekler için ekstra ücretler istenmekte. Üstelik her kapıya da uyum sağlamamaktadır.
 
-          Bu proje; ev, işyeri, her türlü kapı ve para kasaları vb. yerlere takılarak kullanılabilir. (uyarlanabilir.)  İster kumanda, ister cep telefonu veya ofisinizden bilgisayarla kontrol edebilirsiniz. Evde yokken kapınıza gelen misafire kapıyı açabilir, anahtarı unuttuğunuzda cep telefonunuzu anahtara çevirerek teknolojinin nimetinden faydalanabilirsiniz.
+          Bu proje; ev, işyeri, her türlü kapı ve para kasaları vb. yerlere takılarak kullanılabilir. (uyarlanabilir.)  İster kumanda, ister cep telefonu veya ofisinizden bilgisayarla kontrol edebilirsiniz. Evde yokken kapınıza gelen misafire kapıyı açabilir, anahtarı unuttuğunuzda cep telefonunuzu anahtara çevirerek teknolojinin nimetinden faydalanabilirsiniz.
 
-          Projemi yaklaşık 150 -200 tl civarı bir maliyetle hem isteğime uygun hem daha gelişmiş bir sistem kurarak sizler ile paylaşıyorum.
+          Projemi yaklaşık 150 -200 tl civarı bir maliyetle hem isteğime uygun hem daha gelişmiş bir sistem kurarak sizler ile paylaşıyorum.
+<p align="center">
+  <img width="800" height="433" src="https://kirmiziyuz.com/wp-content/uploads/2021/06/3D-Asamalar.jpg"/>
+  <img width="800" height="510" src="https://kirmiziyuz.com/wp-content/uploads/2021/06/3D-Asamalar1-e1624819839723.jpg"/>
+</p>
 
 
 
+# DEVRE ŞEMASI
+<p align="center">
+  <img width="800" height="440" src="https://kirmiziyuz.com/wp-content/uploads/2021/06/Akilli-kapi-kilidi-devre-semasi-e1624818920740.png"/>
+</p>
 
 
  
 
- 
+# PROJENİN İLK ÇALIŞMA AYARLARI
+<p align="center">
+  <img width="721" height="485" src="https://kirmiziyuz.com/wp-content/uploads/2021/06/Discovery-Door-locks-1.jpg"/>
+  <img width="491" height="480" src="https://kirmiziyuz.com/wp-content/uploads/2021/06/Discovery-Door-locks-2.jpg"/>
+  <img width="480" height="485" src="https://kirmiziyuz.com/wp-content/uploads/2021/06/Discovery-Door-locks-3.jpg"/>
+</p>
 
-DEVRE ŞEMASI
-
-
- 
-
-PROJENİN İLK ÇALIŞMA AYARLARI
-Proje rest düğmesine basıldığında da yine aşağıdaki gibi cihaz internet bağlantısı için SSD ve Şifre bilgilerini seçerek cihazın alacağı ip adresini belirlemeniz gerekmektedir.
-
+     Proje rest düğmesine basıldığında da yine aşağıdaki gibi cihaz internet bağlantısı için SSD ve Şifre bilgilerini seçerek cihazın alacağı ip adresini belirlemeniz gerekmektedir.
 
 
 
 
-
-
- 
-
-PROJE KODLARI
+# PROJE KODLARI
+```
 /*
   Name:    Discovery Door Lock.ino
   Created: 28/6/2021 23:51:11 AM
@@ -289,40 +297,58 @@ void Kapi_Ac()
   EEPROM.commit();
   digitalWrite(closeLed, LOW);
 }
- 
+``` 
 
-MALZEMELER
-Motor:
+# MALZEMELER
+# Motor:
 MG996R Yüksek Torklu Servo Motor 180 Derece Metal Dişli x1
+<p align="center">
+  <img width="192" height="316" src="https://kirmiziyuz.com/wp-content/uploads/2021/06/mg996r-yuksek-torklu-servo-motor-180-derece-metal-e1624809028608.jpeg"/>
+</p>
+
+Not: Servo içerisindeki potansiyometre sökülerek yerine 2 adet 10k direnç bağlanmalıdır. İki köşeye 10k dirençler bağlanarak orta uçta birleştirilecektir. Ayrıca servo motorun tam tur yapmasını engelleyen çentik kesilmelidir.
 
 
-
-Micro Controller (NodeMCU):
+# Micro Controller (NodeMCU):
 NodeMCU LoLin ESP8266 Geliştirme Kartı x1
+<p align="left">
+  <img width="551" height="367" src="https://kirmiziyuz.com/wp-content/uploads/2021/06/NodeMCU-ESP8266-Pinout.jpg"/>
+</p>
 
 
 
-RF Alıcı Verici:
+
+# RF Alıcı Verici:
 433 MHz RF Kablosuz Alıcı(Reciver) X1
 
 433 MHz 4 Kanal RF Elcik Kumanda X1
+<p align="left">
+  <img width="341" height="341" src="https://kirmiziyuz.com/wp-content/uploads/2021/06/433-mhz-rf-kablosuz-alicireciver-13180-85-O-350x350.jpg"/>
+  <img width="341" height="342" src="https://kirmiziyuz.com/wp-content/uploads/2021/06/433-mhz-4-kanal-rf-elcik-kumanda-28289-84-O-350x350.png"/>
+</p>
 
 
 
-Diğer Elemanlar:
+# Diğer Elemanlar:
 470 Ohm Direnç x5
-
+<p align="left">
+  <img width="153" height="76" src="https://kirmiziyuz.com/wp-content/uploads/2021/06/470-ohm-direnc-direnc-e1624810148409.png"/>
+</p>
 
 
 Push Button x3
-
+<p align="left">
+  <img width="150" height="150" src="https://kirmiziyuz.com/wp-content/uploads/2021/06/Push-Button-150x150.jpg"/>
+</p>
 
 
 Piezo Buzzer x1
-
-
-
- 
+<p align="left">
+  <img width="182" height="164"  src="https://kirmiziyuz.com/wp-content/uploads/2021/06/piezo-buzzer-e1624809793754.jpg"/>
+</p>
 
 Bir miktar kablo
+<p align="left">
+  <img width="334" height="212"  src="https://kirmiziyuz.com/wp-content/uploads/2021/06/cable.jpg"/>
+</p>
 
