@@ -302,7 +302,7 @@ void Kapi_Ac()
 # MALZEMELER
 # Motor:
 MG996R Yüksek Torklu Servo Motor 180 Derece Metal Dişli x1
-<p align="center">
+<p align="left">
   <img width="192" height="316" src="https://kirmiziyuz.com/wp-content/uploads/2021/06/mg996r-yuksek-torklu-servo-motor-180-derece-metal-e1624809028608.jpeg"/>
 </p>
 
